@@ -15,6 +15,7 @@
 		<h4
 		v-for="i in r"
 		>{{n}} x {{i}} = {{x(i)}}</h4>
+		<h4>ผลบวกทั้งหมด = {{sum(row)}}</h4>
 
 	</div>
 
@@ -28,6 +29,13 @@
 			methods:{
 				x: function(row){
 					return this.n*row
+				},
+				sum: function(row){
+					a = 0
+					for (var i = 1;i<=row;i++){
+						a += (this.n * i)
+					}
+					return a
 				}
 			},
 			computed:{
