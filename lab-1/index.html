@@ -8,14 +8,18 @@
 </head>
 <body class="paper">
 	<div id="app">
+		<h1>แม่สูตรคูณ</h1>
 		<input type="number" v-model="n">
 		<input type="number" v-model="row">
 		<div class="space"></div>
-		<h3>สูตรคูณแม่ {{n}}</h3>
-		<h4
+		<h3 class="Head">สูตรคูณแม่ {{n}}</h3>
+		<br>
+		<h4 class="All" 
 		v-for="i in r"
-		>{{n}} x {{i}} = {{x(i)}}</h4>
-		<h4>ผลบวกทั้งหมด = {{sum(row)}}</h4>
+		>{{n}} x {{i}} = {{x(i)}} </h4>
+		<br>
+		<h3 style="font-size: 20px "
+		>ผลบวกทั้งหมดคือ {{sum(row)}}</h3>
 
 	</div>
 

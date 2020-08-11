@@ -1,0 +1,22 @@
+ @import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+.paper{
+	text-align: center;
+	font-family: 'Kanit', sans-serif;
+	background: url(https://www.netpremacy.com/wp-content/uploads/2018/09/Background-website-01.jpg);
+}
+.Head{
+	border: 1px solid black;
+  	padding: 1px;
+  	box-shadow: 5px 5px black;
+  	width: 20%;
+  	margin: auto;
+  	color:red;
+}
+.All{
+	word-spacing: 10px;
+	font-size: 20px;
+}
+.All:hover{
+	font-size: 200%;
+	color: red;
+}
