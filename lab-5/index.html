@@ -76,16 +76,17 @@
 					for(let f in this.fruits){
 						let run = this.fruits[f].run
 						if (run){
-							this.fruits[f].pst = this.fruits[f].pst+1
+							this.fruits[f].pst += this.fruits[f].step
 						}
-						if (this.fruits[f].pst == 12){
-							this.fruits[f].run =false;
-						}
-						if (this.fruits[f].pst == 16){
-							this.fruits[f].run =false;
+						if (this.fruits[f].pst == 10 && this.isRightArrow == 1){
+							this.fruits[f].step = 3
 						}
 
+						if (this.fruits[f].pst == 12 || this.fruits[f].pst == 16){
+							this.fruits[f].run =false;
+						}
 					}
+
 				}
 			}
 		})
