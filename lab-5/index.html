@@ -16,10 +16,8 @@
 		<section id="canvas_main" 
 		:data-play="play">
 			<main>
-				<div class="box _path" 
-				v-for="i in 14" 
-				:data-pst="i"></div>
-				<div class="box _toggle" data-pst="10" data-isrightarrow="1"></div>
+				<div class="box _path" v-for="i in 14":data-pst="i"></div>
+				<div class="box _toggle" data-pst="10" :data-isrightarrow="isRightArrow"></div>
 
 				<div class="box _fruit" v-for="f in fruits" :data-pst="f.pst" :data-type="f.type"></div>
 
@@ -30,7 +28,7 @@
 			</main>
 		</section>
 		<section id="canvas_footer">
-			<div v-if="play" class="btn" id="toggle">
+			<div v-if="play" class="btn" id="toggle" @click="change()">
 				Toggle
 			</div>
 			<div v-if="!play" class="btn" id="endgame">
@@ -61,7 +59,16 @@
 					{id:2,type:'yellow',pst:2,run:true,step:1},
 				]
 			},
-			method:{},
+			methods:{
+				change: function(){
+					if(this.isRightArrow == 1){
+						this.isRightArrow = 0
+					}else{
+						this.isRightArrow = 1
+					}
+					console.log(this.isRightArrow)
+				},
+			},
 			computed:{},
 			watch:{
 				time: function (x){
@@ -71,7 +78,13 @@
 						if (run){
 							this.fruits[f].pst = this.fruits[f].pst+1
 						}
-						console.log()
+						if (this.fruits[f].pst == 12){
+							this.fruits[f].run =false;
+						}
+						if (this.fruits[f].pst == 16){
+							this.fruits[f].run =false;
+						}
+
 					}
 				}
 			}
