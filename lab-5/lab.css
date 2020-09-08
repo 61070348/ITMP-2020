@@ -64,7 +64,7 @@ div.box{
 	cursor: pointer;
 }
 #endgame{
-	background-color: black;
+	background-color: #333;
 }
 .box._toggle{
 	background-image: url('arrow.png');
