@@ -1,0 +1,9 @@
+body{
+    text-align: center;
+    background-color:coral;
+    font-family: 'Trebuchet MS';
+}
+h2:hover{
+    color: wheat;
+    cursor: pointer;
+}
