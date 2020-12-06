@@ -10,6 +10,7 @@
 
 <body>
 	<div id="canvas">
+
 		<section id="canvas_header">
 			<div>
 				เหลือเวลา {{time}} วินาที
@@ -32,6 +33,11 @@
 				{{score}} คะแนน
 			</div>
 		</section>
+		<section id="canvas_restart">
+			<div style="color:red;font-size: 30px; cursor: pointer;" @click="restart()">
+				Restart
+			</div>
+		</section>
 	</div>
 	<script>
 		let picklight = "20%" //เลือกว่ารอบนี้ อันพิเศษจะมีความสว่าง 20%
@@ -51,6 +57,9 @@
 				l: 50,//ความสว่างของสีทั่วไปในรอบนี้
 			},
 			methods: {
+				restart:function(){
+					location.reload();
+				},
 				check: function (e) {
 					console.log(e)
 					if (e === true) {
@@ -80,6 +89,7 @@
 						this.time -= 1
 					}
 				}
+				
 
 			}
 		})

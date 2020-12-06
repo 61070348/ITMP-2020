@@ -10,7 +10,8 @@ body{
 	background-color: grey;
 }
 #canvas_header,
-#canvas_footer{
+#canvas_footer,
+#canvas_restart{
 	background-color: black;
 	height: 50px;
 	color: white;
@@ -22,7 +23,8 @@ body{
 }
 #canvas_header,
 #canvas_main,
-#canvas_footer{
+#canvas_footer,
+#canvas_restart{
 	display: flex;
 	justify-content: center;
 	align-items: center;
